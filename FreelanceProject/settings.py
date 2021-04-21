@@ -38,7 +38,7 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'freelancer_profile',
-    'crispy_forms,
+    'crispy_forms',
     'phonenumber_field',
 
 ]
