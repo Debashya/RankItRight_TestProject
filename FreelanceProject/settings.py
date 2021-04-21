@@ -9,7 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+<<<<<<< HEAD
 # import dj_database_url
+=======
+>>>>>>> 900f6f0cd6fb1d75d9d71b015a3c3f7ced3f49bb
 import os
 from pathlib import Path
 
@@ -22,7 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!('django-insecure-u%#i+-+na1zs7u_@934!byhm1r_vbg5v!b)pzzo^-el5i=yj(u')
 SECRET_KEY = 'django-insecure-u%#i+-+na1zs7u_@934!byhm1r_vbg5v!b)pzzo^-el5i=yj(u'
+<<<<<<< HEAD
 # os.environ.get('SECRET_KEY')
+=======
+#os.environ.get('SECRET_KEY')
+>>>>>>> 900f6f0cd6fb1d75d9d71b015a3c3f7ced3f49bb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -39,7 +46,11 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'freelancer_profile',
+<<<<<<< HEAD
     'crispy_forms,
+=======
+    "crispy_forms",
+>>>>>>> 900f6f0cd6fb1d75d9d71b015a3c3f7ced3f49bb
     'phonenumber_field',
 
 ]
@@ -93,7 +104,7 @@ DATABASES = {
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
