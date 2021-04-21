@@ -55,22 +55,6 @@ def search_data(request):
 def get_behance_images(request, id):
 
     user = get_object_or_404(Freelancer, pk=id)
-    # options = Options()
-    # options.headless = True
-    # options.add_argument("--window-size=1920,1080")
-    # driver = webdriver.Chrome(options=options)
-
-    # driver.get(user.url)
-
-    # all_images = driver.find_elements_by_xpath(
-    #     '//div[@class="Cover-content-2R2"]/img')
-
-    # for actual_image in images:
-    #     if actual_image.get_attribute('src') and 'https' in actual_image.get_attribute('src'):
-    #         img_urls.add(actual_image.get_attribute('src'))
-
-    # print(all_images)
-    # driver.close()
     html = urlopen(user.url)
     bs = BeautifulSoup(html, 'html.parser')
     images = bs.find_all('img', {'src': re.compile('.jpg')})
@@ -78,7 +62,7 @@ def get_behance_images(request, id):
     print(images)
     for image in images:
         img_urls.append(image['src'])
-        # img_urls.append("https:"+image['src'])
+        
         print(image['src']+'\n')
 
     context = {
